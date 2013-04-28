@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="./resources/css/default.css" rel="stylesheet" type="text/css" />
+        <link href="./resources/css/cssLayout.css" rel="stylesheet" type="text/css" />
+        <link href="./resources/css/estilos.css" rel="stylesheet" type="text/css" />
+        <ui:insert name="titulo">
+            <title>Facelets Template</title>
+        </ui:insert>
+    </h:head>
+
+    <h:body>
+        <div id="contenedor">
+        <div id="encabezado">
+            <ui:insert name="top">
+                <table>
+                    <tr>
+                        <td><img src="resources/img/gauchita.jpg" width="20%"/> </td>
+                        <td><h3>BODEGAS: La Rosa</h3></td>
+                    </tr>
+                </table>
+            </ui:insert>
+            
+        </div>
+        <div>
+            <div id="menu">
+                <ui:insert name="left">
+                    <h:form>
+                        <ul>
+                            <li><h:commandLink action="index" value="Index"/></li>
+                            <li><h:commandLink action="listar" value="Listar Uvas"/></li>
+                        </ul>
+                    </h:form>
+                </ui:insert>
+            </div>
+            <div id="contenido" class="left_content">
+                <ui:insert name="content">
+                    <p>Bienvenidos al Sitio de Bodegas La Rosa</p>
+                </ui:insert>
+            </div>
+        </div>
+        <div id="pie">
+            <ui:insert name="bottom">
+                <p>ALUMNO: William Daniel Guillin</p>
+                <p>AÑO 2012</p>
+            </ui:insert>
+        </div>
+        </div>
+    </h:body>
+
+</html>

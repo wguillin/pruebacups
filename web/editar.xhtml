@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    
+    <ui:composition template="./plantilla.xhtml">
+        <ui:define name="titulo">
+            <title>Editar Pasajero</title>
+        </ui:define>
+        <ui:define name="left">
+            <h:form>
+                <ul>
+                    <li><h:commandLink action="listar" value="Volver"/></li>
+                    <li><h:commandLink action="index" value="Volver Index"/></li>
+                </ul>
+            </h:form>
+        </ui:define>
+        
+        <ui:define name="content">
+            <h:outputFormat value="Edición de Uvas" style="font-size: large;"/>
+            <h:form>            
+                <h:panelGrid columns="3">
+                    <h:outputLabel value="Codigo: " for="cod"/>
+                    <h:inputText id="cod" value="#{editarBean.uva.iduva}" required="true"/>
+                    <h:message for="cod"/>
+                     
+                    <h:outputLabel value="Nombre: " for="nom"/>
+                    <h:inputText id="nom" value="#{editarBean.uva.nombreUva}" required="true"/>
+                    <h:message for="nom"/>
+                    
+                    <h:outputLabel value="Color: " for="col"/>
+                    <h:inputText id="col" value="#{editarBean.uva.colorUva}" required="true"/>
+                    <h:message for="col"/>
+                    
+                    <h:panelGroup>
+                    <h:commandButton value="Actualizar" action="#{editarBean.guardar()}"/>
+                    </h:panelGroup>
+                </h:panelGrid>
+                
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>
+
